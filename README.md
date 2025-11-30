@@ -73,7 +73,6 @@ msbuild TaskManagerLoader.csproj /p:Configuration=Release
 
 ## Como Usar
 
-AVISO: Este código é APENAS para fins educacionais em ambientes controlados. Usar em sistemas que você não tem permissão é crime.
 
 ```powershell
 dotnet build -c Release
@@ -115,7 +114,7 @@ int status = ntOpenProcess(pHandle, desiredAccess, pOa, pCid);
 
 ## Mitigações
 
-Este código evita algumas proteções usando syscalls diretas e Hell's Gate, mas antivírus moderno ainda pega por:
+Este código evita algumas proteções usando syscalls indiretas e Hell's Gate, mas antivírus moderno ainda pega por:
 - Comportamento suspeito
 - Detecção heurística
 - Análise de comportamento em tempo real
@@ -125,20 +124,10 @@ Este código evita algumas proteções usando syscalls diretas e Hell's Gate, ma
 - Usar janela decoy
 - Tartarus's Gate (ainda mais furtivo)
 - Suporte x86 (32-bit)
-- Criptografar shellcode
-- DLL injection
 - Ofuscação de código C#
 
 
 
 ## Disclaimer
 
-Este projeto é APENAS para fins educacionais. Unauthorized access to computer systems is illegal.
-
-Use apenas em:
-- Ambientes de laboratório pessoais
-- Sistemas que você tem permissão explícita
-- Pesquisa de segurança aprovada
-- Competições de CTF/ethical hacking
-
-Feito com C# e Windows internals
+Feito com C# e Odio
